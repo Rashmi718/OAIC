@@ -1,8 +1,23 @@
-'use client';
-
 import Link from 'next/link';
 import CountdownTimer from '@/components/ui/CountdownTimer';
 import { ChevronDown } from 'lucide-react';
+
+// Deterministic pseudo-random values seeded by index — avoids SSR/hydration mismatch
+function seededValue(seed: number, min: number, max: number): number {
+  const x = Math.sin(seed * 9301 + 49297) * 233280;
+  const r = x - Math.floor(x); // 0..1
+  return min + r * (max - min);
+}
+
+// Pre-compute particle data once at module level (server + client identical)
+const PARTICLES = Array.from({ length: 20 }, (_, i) => ({
+  width:             seededValue(i * 7 + 1, 2, 6),
+  height:            seededValue(i * 7 + 2, 2, 6),
+  left:              seededValue(i * 7 + 3, 0, 100),
+  top:               seededValue(i * 7 + 4, 0, 100),
+  animationDelay:    seededValue(i * 7 + 5, 0, 6),
+  animationDuration: seededValue(i * 7 + 6, 4, 12),
+}));
 
 export default function HeroSection() {
   return (
@@ -21,19 +36,19 @@ export default function HeroSection() {
           }}
         />
 
-        {/* Floating particles simulation */}
-        {[...Array(20)].map((_, i) => (
+        {/* Floating particles — deterministic positions for SSR safety */}
+        {PARTICLES.map((p, i) => (
           <div
             key={i}
             className="absolute rounded-full bg-glow-amber opacity-[0.06]"
             style={{
-              width: Math.random() * 4 + 2 + 'px',
-              height: Math.random() * 4 + 2 + 'px',
-              left: Math.random() * 100 + '%',
-              top: Math.random() * 100 + '%',
-              animationDelay: Math.random() * 6 + 's',
-              animationDuration: Math.random() * 8 + 4 + 's',
-              animation: `float ${Math.random() * 8 + 4}s ease-in-out infinite`,
+              width:             `${p.width}px`,
+              height:            `${p.height}px`,
+              left:              `${p.left}%`,
+              top:               `${p.top}%`,
+              animationDelay:    `${p.animationDelay}s`,
+              animationDuration: `${p.animationDuration}s`,
+              animation:         `float ${p.animationDuration}s ease-in-out infinite`,
             }}
           />
         ))}

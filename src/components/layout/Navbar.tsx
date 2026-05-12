@@ -24,6 +24,10 @@ export default function Navbar() {
   useEffect(() => {
     setMobileOpen(false);
     setActiveDropdown(null);
+    // Clear any pending hover-close timer on route change
+    return () => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
   }, [pathname]);
 
   const handleMouseEnter = (label: string) => {

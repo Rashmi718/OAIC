@@ -64,7 +64,7 @@ export default function HomePage() {
             <p className="font-body text-earth-400 leading-relaxed mb-6">
               From large language models to AI for social good, from healthcare to agriculture — OAIC
               2026 covers the full spectrum of AI research and applications with a special focus on
-              India's unique opportunities and challenges.
+              India&apos;s unique opportunities and challenges.
             </p>
             <Link
               href="/about/about-us"

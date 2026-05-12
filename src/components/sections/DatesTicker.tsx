@@ -1,6 +1,3 @@
-'use client';
-
-import { useEffect, useRef } from 'react';
 import { importantDates } from '@/data/dates';
 
 export default function DatesTicker() {

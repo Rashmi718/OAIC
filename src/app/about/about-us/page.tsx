@@ -29,8 +29,8 @@ export default function AboutUsPage() {
 
               <div className="bg-dark-800 border border-earth-700 border-l-4 border-l-[#C5A359] rounded-xl p-6 mb-8">
                 <blockquote className="font-display text-xl text-earth-200 italic leading-relaxed">
-                  "AI is not just a technology — it is a means to uplift communities, preserve cultures,
-                  and solve the challenges unique to our region and our time."
+                  &ldquo;AI is not just a technology — it is a means to uplift communities, preserve cultures,
+                  and solve the challenges unique to our region and our time.&rdquo;
                 </blockquote>
                 <cite className="font-mono text-earth-500 text-sm mt-3 block">— OAIC 2026 Mission Statement</cite>
               </div>

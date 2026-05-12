@@ -20,6 +20,7 @@ function AnimatedCounter({ value, suffix = '' }: { value: number; suffix?: strin
   const [count, setCount] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
   const started = useRef(false);
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -30,11 +31,12 @@ function AnimatedCounter({ value, suffix = '' }: { value: number; suffix?: strin
           const steps = 50;
           const increment = value / steps;
           let current = 0;
-          const timer = setInterval(() => {
+          timerRef.current = setInterval(() => {
             current += increment;
             if (current >= value) {
               setCount(value);
-              clearInterval(timer);
+              clearInterval(timerRef.current!);
+              timerRef.current = null;
             } else {
               setCount(Math.floor(current));
             }
@@ -44,7 +46,14 @@ function AnimatedCounter({ value, suffix = '' }: { value: number; suffix?: strin
       { threshold: 0.5 }
     );
     if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      // Cancel in-flight animation interval on unmount
+      if (timerRef.current) {
+        clearInterval(timerRef.current);
+        timerRef.current = null;
+      }
+    };
   }, [value]);
 
   return (

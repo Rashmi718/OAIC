@@ -39,7 +39,7 @@ export default function AttractionsPage() {
           <div className="border-l-4 border-l-[#C5A359] pl-8 mb-8">
             <h2 className="font-display text-2xl font-semibold text-earth-100 mb-2">Local Cuisine</h2>
             <p className="font-body text-earth-400 leading-relaxed">
-              Odisha's cuisine is a hidden gem — simple, nutritious, and bursting with flavour. Don't leave without trying:
+              Odisha&apos;s cuisine is a hidden gem — simple, nutritious, and bursting with flavour. Don&apos;t leave without trying:
             </p>
           </div>
 

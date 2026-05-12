@@ -35,12 +35,12 @@ export default function VenueSection() {
             <h3 className="font-display text-xl font-semibold text-glow-amber mb-1">KIIT University</h3>
             <p className="font-body text-earth-400 text-sm mb-5">Bhubaneswar, Odisha, India — October 15–17, 2026</p>
             <p className="font-body text-earth-300 leading-relaxed mb-6">
-              Bhubaneswar, the "Temple City of India," is also one of the fastest-growing tech hubs in
+              Bhubaneswar, the &ldquo;Temple City of India,&rdquo; is also one of the fastest-growing tech hubs in
               eastern India. As the state capital of Odisha, it blends rich cultural heritage with a modern
-              IT ecosystem, making it the perfect backdrop for India's first dedicated AI conference.
+              IT ecosystem, making it the perfect backdrop for India&apos;s first dedicated AI conference.
             </p>
             <p className="font-body text-earth-400 text-sm leading-relaxed mb-6">
-              KIIT University's world-class campus facilities host the conference, with state-of-the-art
+              KIIT University&apos;s world-class campus facilities host the conference, with state-of-the-art
               auditoriums, seminar halls, and exhibition spaces just minutes from the city center.
             </p>
             <div className="flex flex-wrap gap-3">
