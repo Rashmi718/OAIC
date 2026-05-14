@@ -19,10 +19,12 @@ export default function WorkshopsPage() {
         breadcrumbs={[{ href: '/program/workshops', label: 'Workshops' }]}
       />
       <Section>
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-2 sm:mx-6 md:mx-10 lg:mx-16">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {workshops.map((w) => (
             <WorkshopCard key={w.id} workshop={w} />
           ))}
+        </div>
         </div>
       </Section>
     </>

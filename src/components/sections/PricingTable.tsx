@@ -35,7 +35,7 @@ export default function PricingTable() {
       </TabsList>
       {pricingTiers.map((tier) => (
         <TabsContent key={tier.name} value={tier.name}>
-          <Card>
+          <Card glowOnHover={false}>
             <CardHeader>
               <CardTitle>{tier.name} Registration</CardTitle>
               <CardDescription>Cutoff: {tier.cutoff}</CardDescription>
