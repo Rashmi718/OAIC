@@ -7,7 +7,7 @@ export interface NavItem {
 export interface ImportantDate {
   event: string;
   date: string;
-  status: 'open' | 'closed' | 'upcoming' | 'extended';
+  status: 'open' | 'closed' | 'upcoming' | 'extended' | 'past';
 }
 
 export interface Speaker {

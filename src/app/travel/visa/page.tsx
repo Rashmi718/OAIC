@@ -142,19 +142,21 @@ export default function VisaPage() {
           </Card>
 
           <div className="flex flex-wrap justify-center gap-4">
-            <Button as="a" size="lg">
-              <a
-                href="https://indianvisaonline.gov.in"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <ExternalLink className="mr-2 h-4 w-4" /> Indian e-Visa Portal
-              </a>
+            <Button
+              as="a"
+              href="https://indianvisaonline.gov.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              size="lg"
+            >
+              <ExternalLink className="mr-2 h-4 w-4" /> Indian e-Visa Portal
             </Button>
-            <Button as="a" variant="secondary" size="lg">
-              <a href="mailto:info@oaic2024.in?subject=Invitation Letter Request">
-                Request Invitation Letter
-              </a>
+            <Button
+              as="a"
+              href="mailto:info@oaic2024.in?subject=Invitation Letter Request"
+              size="lg"
+            >
+              Request Invitation Letter
             </Button>
           </div>
         </div>

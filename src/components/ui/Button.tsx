@@ -5,14 +5,16 @@ import Link from 'next/link';
 interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
   size?: 'sm' | 'md' | 'lg';
-   as?: typeof Link | 'a';
+  as?: React.ElementType;
   href?: string;
+  target?: string;
+  rel?: string;
 }
 
 export const Button = React.forwardRef<
-  HTMLButtonElement,
+  HTMLElement,
   IButtonProps
->(({ as, variant = 'primary', size = 'md', className, href, ...props }, ref) => {
+>(({ as: Component = 'button', variant = 'primary', size = 'md', className, href, ...props }, ref) => {
   const base =
     'inline-flex items-center justify-center font-semibold tracking-wide rounded-md transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-60 disabled:cursor-not-allowed';
 
@@ -31,15 +33,15 @@ export const Button = React.forwardRef<
 
   const classes = cn(base, variants[variant], sizes[size], className);
 
-  if (as === Link && href) {
-    return <Link href={href} className={classes}>{props.children}</Link>;
+  if (Component === Link && href) {
+    return <Link href={href} className={classes} {...(props as React.AnchorHTMLAttributes<HTMLAnchorElement>)}>{props.children}</Link>;
   }
 
-  if (as === 'a' && href) {
-    return <a href={href} className={classes}>{props.children}</a>;
+  if (Component === 'a' && href) {
+    return <a href={href} className={classes} {...(props as React.AnchorHTMLAttributes<HTMLAnchorElement>)}>{props.children}</a>;
   }
 
-  return <button className={classes} ref={ref} {...props} />;
+  return <button className={classes} ref={ref as React.Ref<HTMLButtonElement>} {...props} />;
 });
 
 Button.displayName = 'Button';
