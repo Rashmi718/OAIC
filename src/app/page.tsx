@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/Button';
 import { importantDates as dates } from '@/data/dates';
 
 export const metadata: Metadata = {
-  title: '1st Odisha AI Conference (OAIC) 2026 - Bhubaneswar, India',
+  title: 'OAIC 2026',
   description: 'The 2026 1st Odisha AI Conference (OAIC) is a premier platform for exchanging ideas and presenting research findings in AI. Join us in Bhubaneswar, India, December 19-20, 2026.',
 };
 

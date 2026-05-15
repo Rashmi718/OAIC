@@ -125,7 +125,7 @@ export default function Footer() {
           <p>&copy; {currentYear} Siksha &apos;O&apos; Anusandhan &amp; OAIC – All rights reserved.</p>
           <div className="flex items-center gap-2">
             <div className="w-0.5 h-0.5 rounded-full bg-gray-700"></div>
-            <span>Published by OAIC Press</span>
+            <span>Published by IEEE</span>
             <div className="w-0.5 h-0.5 rounded-full bg-gray-700"></div>
             <span>Bhubaneswar, Odisha</span>
           </div>

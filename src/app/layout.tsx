@@ -56,6 +56,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${inter.variable} ${sourceSerif.variable} ${robotoMono.variable}`}
     >
       <head>
@@ -76,7 +77,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
       </head>
-      <body className="bg-gray-50 text-gray-800 font-sans antialiased">
+      <body className="bg-gray-50 text-gray-800 font-sans antialiased" suppressHydrationWarning>
         <Navbar />
         <main id="main-content" className="flex-grow">
           {children}
