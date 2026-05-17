@@ -101,11 +101,20 @@ export default function ContactForm() {
             <FormItem>
               <FormLabel className="text-[#002147] font-bold uppercase tracking-widest text-[10px]">Subject</FormLabel>
               <FormControl>
-                <Input
-                  placeholder="Subject of your inquiry"
+                <select
                   {...field}
-                  className="rounded-none border-gray-200 focus:border-[#002147] focus:ring-0 transition-colors"
-                />
+                  className="flex h-10 w-full rounded-none border border-gray-200 bg-background px-3 py-2 text-sm focus:border-[#002147] focus:outline-none focus:ring-0 transition-colors cursor-pointer"
+                >
+                  <option value="" disabled>Select a subject</option>
+                  <option value="hackathon">Hackathon</option>
+                  <option value="participation">Participation</option>
+                  <option value="sponsor">Sponsor</option>
+                  <option value="call for paper">Call for Paper</option>
+                  <option value="call for workshop">Call for Workshop</option>
+                  <option value="call for poster presentation">Call for Poster Presentation</option>
+                  <option value="general query">General Query</option>
+                  <option value="registration">Registration</option>
+                </select>
               </FormControl>
               <FormMessage />
             </FormItem>
