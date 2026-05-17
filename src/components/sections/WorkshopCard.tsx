@@ -22,17 +22,23 @@ export default function WorkshopCard({ workshop }: Readonly<WorkshopCardProps>) 
 
       {/* Content */}
       <div className="flex flex-col flex-1 p-4 sm:p-6">
+        {/* ORIGINAL CONTENT - COMMENTED FOR NOW
         <h3 className="text-base sm:text-lg font-semibold mb-2">{workshop.title}</h3>
         <p className="text-sm text-muted-foreground line-clamp-4 flex-1">
           {workshop.abstract}
         </p>
+        */}
+        <h3 className="text-base sm:text-lg font-semibold mb-2">To Be Updated Soon</h3>
+        <p className="text-sm text-muted-foreground line-clamp-4 flex-1">
+          Workshop topics and detailed descriptions will be updated soon. Stay tuned for more information.
+        </p>
       </div>
 
       {/* Footer — organizers */}
-      <div className="flex items-start gap-2 px-4 pb-4 sm:px-6 sm:pb-6 text-sm text-muted-foreground border-t border-primary-50 pt-3">
+      {/* <div className="flex items-start gap-2 px-4 pb-4 sm:px-6 sm:pb-6 text-sm text-muted-foreground border-t border-primary-50 pt-3">
         <Users className="mt-0.5 h-4 w-4 shrink-0" />
         <span>{workshop.organizers.join(', ')}</span>
-      </div>
+      </div> */}
     </div>
   );
 }

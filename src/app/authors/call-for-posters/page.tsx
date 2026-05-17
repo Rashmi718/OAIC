@@ -108,9 +108,12 @@ export default function CallForPostersPage() {
             </AlertDescription>
           </Alert>
 
-          <div className="mt-12 text-center">
+          <div className="mt-12 text-center flex justify-center items-center gap-6">
             <Button as="a" href="#" className="bg-primary-600 hover:bg-primary-500 text-white text-lg px-8 py-6 shadow-md transition-transform hover:-translate-y-1 rounded-md border-none font-bold">
               Submit Poster Abstract
+            </Button>
+            <Button as="a" href="#" className="bg-primary-600 hover:bg-primary-500 text-white text-lg px-8 py-6 shadow-md transition-transform hover:-translate-y-1 rounded-md border-none font-bold">
+              Abstract format
             </Button>
           </div>
         </div>

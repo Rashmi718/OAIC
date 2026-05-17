@@ -22,7 +22,7 @@ export default function AtAGlancePage() {
   return (
     <>
       <PageHeader
-        title="Program At a Glance"
+        title="Program At a Glance (To be Updated)"
         description="Three days of world-class AI research, workshops, and networking. October 15–17, 2026."
         breadcrumbs={[
           { href: '/program/at-a-glance', label: 'Program At a Glance' },

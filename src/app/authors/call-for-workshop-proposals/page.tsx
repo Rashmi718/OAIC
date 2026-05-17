@@ -30,8 +30,6 @@ const proposalTopics = [
 const keyDates = [
   { date: 'June 30, 2026', event: 'Workshop Proposal Deadline' },
   { date: 'July 20, 2026', event: 'Acceptance Notification' },
-  { date: 'August 15, 2026', event: 'Workshop Paper Deadline' },
-  { date: 'September 15, 2026', event: 'Workshop Camera-Ready' },
   { date: 'October 15–17, 2026', event: 'Workshop Days' },
 ];
 

@@ -30,7 +30,7 @@ function GeneralGuidelines() {
         <ul className="space-y-5">
           {[
             'Papers must not exceed the specified page limits (excluding references).',
-            'All submissions will undergo a double-blind peer review process.',
+            'All submissions will undergo a blind peer review process.',
             'Authors must anonymize their submissions, removing names, affiliations, and acknowledgements.',
             'Self-citations should be minimized and written in the third person to maintain anonymity.',
             'Submitted papers must not be under review elsewhere simultaneously.',
@@ -55,7 +55,7 @@ function FormattingGuidelines() {
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
         {[
           { label: 'Format', value: 'IEEE double-column, A4' },
-          { label: 'Full Paper Length', value: '8–10 pages (+ refs)' },
+          { label: 'Full Paper Length', value: '6 pages (+ refs)' },
           { label: 'Short Paper Length', value: '4–6 pages (+ refs)' },
           { label: 'Font', value: 'Times New Roman, 10pt' },
           { label: 'File Format', value: 'PDF only' },
@@ -70,7 +70,7 @@ function FormattingGuidelines() {
         ))}
       </div>
       <div className="flex flex-wrap gap-6 pt-4">
-        <Button as="a" href="#" className="bg-primary-600 hover:bg-primary-500 text-white text-lg px-8 py-6 shadow-md transition-transform hover:-translate-y-1 rounded-md border-none font-bold">
+        <Button as="a" href="https://www.ieee.org/conferences/publishing/templates" className="bg-primary-600 hover:bg-primary-500 text-white text-lg px-8 py-6 shadow-md transition-transform hover:-translate-y-1 rounded-md border-none font-bold">
           <FileDown className="mr-3 h-5 w-5" /> LaTeX Template
         </Button>
         <Button as="a" href="#" variant="outline" className="text-primary-600 border-2 border-primary-600 hover:bg-primary-50 text-lg px-8 py-6 shadow-sm transition-transform hover:-translate-y-1 rounded-md font-bold">

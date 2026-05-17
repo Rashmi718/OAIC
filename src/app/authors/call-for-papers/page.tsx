@@ -29,10 +29,9 @@ export default function CallForPapersPage() {
           <div className="mb-14 bg-primary-50 border-none border-l-4 border-l-primary-600 rounded-r-xl p-8 shadow-sm">
             <p className="text-lg md:text-xl text-primary-950 leading-relaxed font-medium">
               The conference solicits contributions that present original and
-              unpublished work on all aspects of AI, machine learning, and
-              their applications. All accepted papers will be published in the
-              conference proceedings and archived in major academic
-              databases.
+              unpublished work on all aspects of AI, Machine Learning, and
+              it is not limited to these topics. All accepted papers will be published in the
+              IEEE Xplore .
             </p>
           </div>
 
