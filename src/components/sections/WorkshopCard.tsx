@@ -1,6 +1,6 @@
 import type { Workshop } from '@/types';
 import { Badge } from '@/components/ui/Badge';
-import { Clock, MapPin, Users } from 'lucide-react';
+import { Clock, MapPin } from 'lucide-react';
 
 interface WorkshopCardProps {
   workshop: Workshop;
