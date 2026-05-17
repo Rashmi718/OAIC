@@ -1,4 +1,4 @@
-import { ReactNode, HTMLAttributes, LabelHTMLAttributes } from 'react';
+import { HTMLAttributes, LabelHTMLAttributes } from 'react';
 import { FormProvider } from 'react-hook-form';
 
 export const Form = FormProvider;

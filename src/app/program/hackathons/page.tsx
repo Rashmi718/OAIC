@@ -11,7 +11,7 @@ import {
   CardTitle,
 } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
-import { Badge } from '@/components/ui/Badge';
+
 
 export const metadata: Metadata = {
   title: 'Hackathon',
