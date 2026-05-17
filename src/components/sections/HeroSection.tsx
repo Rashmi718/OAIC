@@ -95,8 +95,8 @@ export default function HeroSection() {
                 <div className="absolute -bottom-1.5 -right-1.5 w-full h-full border-2 border-[#E58A3E]/70 z-0 transition-transform duration-500 group-hover:translate-x-0.5 group-hover:translate-y-0.5"></div>
 
                 <Button
-                  as={Link}
-                  href="/authors/call-for-papers"
+                  as={Link} target="self"
+                  href="https://edas.info/login.php?rurl=aHR0cHM6Ly9lZGFzLmluZm8vTjM1MzYxP2M9MzUzNjE%3D"
                   className="relative z-10 bg-[#0C527D] hover:bg-[#08283C] text-white border-none rounded-none py-3 px-8 text-[13px] font-bold uppercase tracking-[0.15em] transition-all duration-300 shadow-lg w-full sm:w-auto text-center block"
                 >
                   Submit a Paper
